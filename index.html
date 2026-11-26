@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Les Rendez-vous du numérique</title>
+  <meta name="description" content="Des conférences gratuites pour mieux comprendre les données, l'intelligence artificielle et leurs enjeux au quotidien.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="logo" href="#accueil" aria-label="Les Rendez-vous du numérique"><img src="images/logo.png" alt="Les Rendez-vous du numérique" height="64"></a>
+  <button class="menu-toggle" aria-label="Menu" aria-expanded="false">☰</button>
+  <nav class="main-nav" id="nav">
+    <a href="#accueil" class="active">Accueil</a>
+    <a href="#conferences">Conférences</a>
+    <a href="ressources.html">Ressources</a>
+    <a href="a-propos.html">À propos</a>
+    <a href="#contact">Contact</a>
+    <a href="contact.html" class="btn btn-small">Nous contacter</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="accueil">
+    <div class="hero-text">
+      <h1>Comprendre le numérique<br><span>à tout âge</span></h1>
+      <p>Des conférences gratuites pour mieux comprendre les données, l'intelligence artificielle et leurs enjeux au quotidien.</p>
+      <a class="btn" href="#conferences">Découvrir les conférences <span aria-hidden="true">→</span></a>
+      <a class="link-underline" href="#commune">Accueillir une conférence</a>
+    </div>
+    <div class="hero-photo">
+      <img src="images/hero.jpg" alt="Une conférencière présente à un public de seniors dans une salle conviviale">
+    </div>
+  </section>
+
+  <section class="audiences" aria-labelledby="t-tous">
+    <h2 id="t-tous">Des rendez-vous ouverts à tous</h2>
+    <div class="cards">
+      <article class="card">
+        <img src="images/grand-public.png" alt="Trois personnes de tous âges souriantes" loading="lazy">
+        <h3>Grand public</h3>
+        <p>Pour toutes celles et ceux qui souhaitent mieux comprendre le numérique et ses usages.</p>
+      </article>
+      <article class="card">
+        <img src="images/seniors.png" alt="Un couple de seniors souriant" loading="lazy">
+        <h3>Seniors</h3>
+        <p>Des explications claires, concrètes et sans jargon, à un rythme adapté.</p>
+      </article>
+      <article class="card">
+        <img src="images/ecoles.png" alt="Deux élèves souriants avec leurs sacs à dos" loading="lazy">
+        <h3>Écoles et collèges</h3>
+        <p>Des interventions accessibles pour développer une culture numérique éclairée et responsable.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="first-event" id="conferences" aria-labelledby="t-premier">
+    <h2 id="t-premier">Notre premier rendez-vous</h2>
+    <div class="event">
+      <div class="event-art">
+        <img src="images/ia.png" alt="Ordinateur portable affichant IA" loading="lazy">
+      </div>
+      <div class="event-body">
+        <h3>Comprendre l'intelligence artificielle</h3>
+        <p class="meta"><span aria-hidden="true">📅</span> Début 2027 &nbsp;•&nbsp; Date à confirmer</p>
+        <a class="btn btn-small" href="contact.html">En savoir plus <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-commune" id="commune">
+    <img class="mairie" src="images/mairie.png" alt="Mairie avec drapeau français" loading="lazy">
+    <div class="cta-text">
+      <h3>Vous êtes une commune ou un établissement scolaire&nbsp;?</h3>
+      <p>Organisez un Rendez-vous du numérique sur votre territoire ou dans votre établissement.</p>
+    </div>
+    <a class="btn btn-small" href="contact.html">Proposer une intervention <span aria-hidden="true">→</span></a>
+  </section>
+</main>
+
+<footer class="site-footer" id="contact">
+  <a class="logo logo-light" href="#accueil"><img src="images/logo.png" alt="Les Rendez-vous du numérique" height="48"></a>
+  <a class="mail" href="mailto:rdvnumerique38@gmail.com">✉ rdvnumerique38@gmail.com</a>
+</footer>
+
+<script>
+  const t = document.querySelector('.menu-toggle'), n = document.getElementById('nav');
+  t.addEventListener('click', () => {
+    const open = n.classList.toggle('open');
+    t.setAttribute('aria-expanded', open);
+  });
+  n.addEventListener('click', e => { if (e.target.tagName === 'A') n.classList.remove('open'); });
+</script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact – Les Rendez-vous du numérique</title>
+  <meta name="description" content="Proposez une intervention ou contactez-nous.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="logo" href="index.html" aria-label="Les Rendez-vous du numérique"><img src="images/logo.png" alt="Les Rendez-vous du numérique" height="64"></a>
+  <button class="menu-toggle" aria-label="Menu" aria-expanded="false">☰</button>
+  <nav class="main-nav" id="nav">
+    <a href="index.html">Accueil</a>
+    <a href="index.html#conferences">Conférences</a>
+    <a href="ressources.html">Ressources</a>
+    <a href="a-propos.html">À propos</a>
+    <a href="#contact">Contact</a>
+    <a href="mailto:rdvnumerique38@gmail.com" class="btn btn-small">Nous contacter</a>
+  </nav>
+</header>
+
+<main>
+<section class="page-hero"><h1>Proposer une intervention</h1><p>Communes, écoles, collèges, associations : organisez un Rendez-vous du numérique chez vous.</p></section>
+<section class="content prose">
+  <form id="contact-form" class="form">
+    <label>Votre nom<input name="nom" required autocomplete="name"></label>
+    <label>Votre structure (commune, établissement…)<input name="structure" autocomplete="organization"></label>
+    <label>Votre adresse e-mail<input name="email" type="email" required autocomplete="email"></label>
+    <label>Thème souhaité
+      <select name="theme"><option>Comprendre l'intelligence artificielle</option><option>Les données et la vie privée</option><option>Autre / à définir</option></select>
+    </label>
+    <label>Votre message<textarea name="message" rows="5" required></textarea></label>
+    <button class="btn" type="submit">Envoyer ma demande <span aria-hidden="true">→</span></button>
+    <p class="form-status" id="status" role="status"></p>
+  </form>
+  <div class="alt">
+    <p>Vous préférez nous écrire directement ? <strong id="addr">rdvnumerique38@gmail.com</strong></p>
+    <button class="btn btn-small" type="button" id="copy">Copier l'adresse</button>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer" id="contact">
+  <a class="logo logo-light" href="index.html"><img src="images/logo.png" alt="Les Rendez-vous du numérique" height="48"></a>
+  <a class="mail" href="mailto:rdvnumerique38@gmail.com">✉ rdvnumerique38@gmail.com</a>
+</footer>
+
+<script>
+const f=document.getElementById('contact-form'),st=document.getElementById('status');
+f.addEventListener('submit',e=>{e.preventDefault();const d=Object.fromEntries(new FormData(f));
+ const corps=`Nom : ${d.nom}\nStructure : ${d.structure||'-'}\nE-mail : ${d.email}\nThème : ${d.theme}\n\n${d.message}`;
+ location.href='mailto:rdvnumerique38@gmail.com?subject='+encodeURIComponent("Proposition d'intervention")+'&body='+encodeURIComponent(corps);
+ st.textContent="Votre messagerie devrait s'ouvrir avec le message prêt à envoyer. Sinon, copiez l'adresse ci-dessous et écrivez-nous directement.";});
+document.getElementById('copy').addEventListener('click',async()=>{try{await navigator.clipboard.writeText('rdvnumerique38@gmail.com');document.getElementById('copy').textContent='Adresse copiée ✓';}catch(_){}});
+</script>
+<script>
+  const t = document.querySelector('.menu-toggle'), n = document.getElementById('nav');
+  t.addEventListener('click', () => {
+    const open = n.classList.toggle('open');
+    t.setAttribute('aria-expanded', open);
+  });
+  n.addEventListener('click', e => { if (e.target.tagName === 'A') n.classList.remove('open'); });
+</script>
+</body>
+</html>

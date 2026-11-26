@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ressources – Les Rendez-vous du numérique</title>
+  <meta name="description" content="Des ressources pour mieux comprendre le numérique.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="logo" href="index.html" aria-label="Les Rendez-vous du numérique"><img src="images/logo.png" alt="Les Rendez-vous du numérique" height="64"></a>
+  <button class="menu-toggle" aria-label="Menu" aria-expanded="false">☰</button>
+  <nav class="main-nav" id="nav">
+    <a href="index.html">Accueil</a>
+    <a href="index.html#conferences">Conférences</a>
+    <a href="ressources.html" class="active">Ressources</a>
+    <a href="a-propos.html">À propos</a>
+    <a href="#contact">Contact</a>
+    <a href="contact.html" class="btn btn-small">Nous contacter</a>
+  </nav>
+</header>
+
+<main>
+<section class="page-hero"><h1>Ressources</h1><p>Des repères simples pour mieux comprendre le numérique, à votre rythme.</p></section>
+<section class="content">
+  <div class="cards">
+    <article class="card text-card"><h3>Les données</h3><p>Ce que sont les données personnelles, où elles circulent et comment mieux les protéger au quotidien.</p><span class="soon">Bientôt disponible</span></article>
+    <article class="card text-card"><h3>L'intelligence artificielle</h3><p>Comprendre ce que l'IA sait faire, ce qu'elle ne sait pas faire, et comment l'utiliser avec discernement.</p><span class="soon">Bientôt disponible</span></article>
+    <article class="card text-card"><h3>Les bons réflexes</h3><p>Mots de passe, messages suspects, informations douteuses : des gestes simples à adopter.</p><span class="soon">Bientôt disponible</span></article>
+  </div>
+  <p class="note">Les supports présentés lors de chaque conférence seront mis à disposition ici. Une question ? <a href="mailto:rdvnumerique38@gmail.com">Écrivez-nous</a>.</p>
+</section>
+</main>
+
+<footer class="site-footer" id="contact">
+  <a class="logo logo-light" href="index.html"><img src="images/logo.png" alt="Les Rendez-vous du numérique" height="48"></a>
+  <a class="mail" href="mailto:rdvnumerique38@gmail.com">✉ rdvnumerique38@gmail.com</a>
+</footer>
+
+<script>
+  const t = document.querySelector('.menu-toggle'), n = document.getElementById('nav');
+  t.addEventListener('click', () => {
+    const open = n.classList.toggle('open');
+    t.setAttribute('aria-expanded', open);
+  });
+  n.addEventListener('click', e => { if (e.target.tagName === 'A') n.classList.remove('open'); });
+</script>
+</body>
+</html>

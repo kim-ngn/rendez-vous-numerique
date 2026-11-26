@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>À propos – Les Rendez-vous du numérique</title>
+  <meta name="description" content="Notre démarche : rendre le numérique compréhensible par toutes et tous.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="logo" href="index.html" aria-label="Les Rendez-vous du numérique"><img src="images/logo.png" alt="Les Rendez-vous du numérique" height="64"></a>
+  <button class="menu-toggle" aria-label="Menu" aria-expanded="false">☰</button>
+  <nav class="main-nav" id="nav">
+    <a href="index.html">Accueil</a>
+    <a href="index.html#conferences">Conférences</a>
+    <a href="ressources.html">Ressources</a>
+    <a href="a-propos.html" class="active">À propos</a>
+    <a href="#contact">Contact</a>
+    <a href="contact.html" class="btn btn-small">Nous contacter</a>
+  </nav>
+</header>
+
+<main>
+<section class="page-hero"><h1>À propos</h1><p>Rendre le numérique compréhensible par toutes et tous.</p></section>
+<section class="content prose">
+  <h2>Notre démarche</h2>
+  <p>Les Rendez-vous du numérique proposent des conférences gratuites pour mieux comprendre les données, l'intelligence artificielle et leurs enjeux au quotidien.</p>
+  <p>Nous privilégions des explications claires, concrètes et sans jargon, à un rythme adapté à chacun.</p>
+  <h2>À qui s'adressent les rendez-vous ?</h2>
+  <ul>
+    <li><strong>Grand public</strong> : toutes celles et ceux qui souhaitent mieux comprendre le numérique et ses usages.</li>
+    <li><strong>Seniors</strong> : des séances à un rythme adapté.</li>
+    <li><strong>Écoles et collèges</strong> : des interventions pour développer une culture numérique éclairée et responsable.</li>
+  </ul>
+  <h2>Accueillir une conférence</h2>
+  <p>Vous êtes une commune ou un établissement scolaire ? Organisez un Rendez-vous du numérique sur votre territoire ou dans votre établissement.</p>
+  <p><a class="btn" href="contact.html">Proposer une intervention <span aria-hidden="true">→</span></a></p>
+</section>
+</main>
+
+<footer class="site-footer" id="contact">
+  <a class="logo logo-light" href="index.html"><img src="images/logo.png" alt="Les Rendez-vous du numérique" height="48"></a>
+  <a class="mail" href="mailto:rdvnumerique38@gmail.com">✉ rdvnumerique38@gmail.com</a>
+</footer>
+
+<script>
+  const t = document.querySelector('.menu-toggle'), n = document.getElementById('nav');
+  t.addEventListener('click', () => {
+    const open = n.classList.toggle('open');
+    t.setAttribute('aria-expanded', open);
+  });
+  n.addEventListener('click', e => { if (e.target.tagName === 'A') n.classList.remove('open'); });
+</script>
+</body>
+</html>
