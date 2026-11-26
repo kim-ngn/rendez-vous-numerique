@@ -168,3 +168,7 @@ section h2::after { content: ""; position: absolute; left: 50%; bottom: 0; width
 .alt { margin-top: 2.5rem; padding: 1.2rem 1.5rem; background: var(--mint); border-radius: var(--radius); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; }
 .alt p { margin: 0; }
 .alt .btn { border: 0; cursor: pointer; font-family: inherit; }
+
+/* Liens légaux */
+.legal { display: flex; gap: 1.2rem; font-size: .9rem; opacity: .85; }
+.legal a:hover { text-decoration: underline; }

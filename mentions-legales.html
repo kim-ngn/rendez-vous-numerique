@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mentions légales – Les Rendez-vous du numérique</title>
+  <meta name="description" content="Mentions légales du site Les Rendez-vous du numérique.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="logo" href="index.html" aria-label="Les Rendez-vous du numérique"><img src="images/logo.png" alt="Les Rendez-vous du numérique" height="64"></a>
+  <button class="menu-toggle" aria-label="Menu" aria-expanded="false">☰</button>
+  <nav class="main-nav" id="nav">
+    <a href="index.html">Accueil</a>
+    <a href="index.html#conferences">Conférences</a>
+    <a href="ressources.html">Ressources</a>
+    <a href="a-propos.html">À propos</a>
+    <a href="mailto:rdvnumerique38@gmail.com" class="btn btn-small">Nous contacter</a>
+  </nav>
+</header>
+
+<main>
+<section class="page-hero"><h1>Mentions légales</h1><p>Dernière mise à jour : 26 novembre 2026</p></section>
+<section class="content prose">
+  <h2>Éditeur du site</h2>
+  <p><strong>Les Rendez-vous du numérique</strong>, association loi 1901.<br>
+  Contact : <a href="mailto:rdvnumerique38@gmail.com">rdvnumerique38@gmail.com</a></p>
+  <h2>Responsable de la publication</h2>
+  <p>Kim Nguyen.</p>
+  <h2>Conception et réalisation</h2>
+  <p>Kim Nguyen.</p>
+  <h2>Hébergement</h2>
+  <p>Le site est hébergé par GitHub Pages, service de GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis. Site : <a href="https://pages.github.com" rel="noreferrer">pages.github.com</a>.</p>
+  <h2>Propriété intellectuelle</h2>
+  <p>Les textes, illustrations, photographies et le logo présents sur ce site sont protégés. Toute reproduction ou réutilisation sans l'accord de l'association est interdite, sauf pour un usage strictement privé ou avec mention de la source.</p>
+  <h2>Responsabilité</h2>
+  <p>L'association s'efforce de fournir des informations exactes et à jour, mais ne peut garantir leur exhaustivité. Les dates et programmes des conférences sont donnés à titre indicatif et peuvent évoluer.</p>
+  <h2>Données personnelles</h2>
+  <p>Pour savoir comment sont traitées vos données, consultez notre <a href="confidentialite.html">politique de confidentialité</a>.</p>
+</section>
+</main>
+
+<footer class="site-footer" id="contact">
+  <a class="logo logo-light" href="index.html"><img src="images/logo.png" alt="Les Rendez-vous du numérique" height="48"></a>
+  <a class="mail" href="mailto:rdvnumerique38@gmail.com">✉ rdvnumerique38@gmail.com</a>
+  <nav class="legal" aria-label="Informations légales"><a href="mentions-legales.html">Mentions légales</a><a href="confidentialite.html">Confidentialité</a></nav>
+</footer>
+
+<script>
+  const t = document.querySelector('.menu-toggle'), n = document.getElementById('nav');
+  t.addEventListener('click', () => { const o = n.classList.toggle('open'); t.setAttribute('aria-expanded', o); });
+</script>
+</body>
+</html>
